@@ -1,4 +1,4 @@
-package com.example.thesparklaboratoryreactnativesystemtones.newarchitecture.modules;
+package com.example.sparklaboratoryreactnativesystemtones.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

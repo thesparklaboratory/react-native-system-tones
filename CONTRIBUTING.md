@@ -51,9 +51,9 @@ Remember to add tests for your change if possible. Run the unit tests by:
 ```sh
 yarn test
 ```
-To edit the Objective-C files, open `example/ios/ReactNativeSystemTonesExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > @thesparklaboratory/react-native-system-tones`.
+To edit the Objective-C files, open `example/ios/ReactNativeSystemTonesExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > @sparklaboratory/react-native-system-tones`.
 
-To edit the Kotlin files, open `example/android` in Android studio and find the source files at `thesparklaboratoryreactnativesystemtones` under `Android`.
+To edit the Kotlin files, open `example/android` in Android studio and find the source files at `sparklaboratoryreactnativesystemtones` under `Android`.
 ### Commit message convention
 
 We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:

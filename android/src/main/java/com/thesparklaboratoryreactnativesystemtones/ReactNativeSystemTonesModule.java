@@ -1,11 +1,11 @@
 package com.thesparklaboratoryreactnativesystemtones;
 
 import androidx.annotation.NonNull;
-import androidx.database.Cursor;
-import androidx.media.MediaPlayer;
-import androidx.media.Ringtone;
-import androidx.media.RingtoneManager;
-import androidx.net.Uri;
+import android.database.Cursor;
+import android.media.MediaPlayer;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
@@ -19,9 +19,12 @@ import com.facebook.react.module.annotations.ReactModule;
 @ReactModule(name = ReactNativeSystemTonesModule.NAME)
 public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSpec {
     public static final String NAME = "ReactNativeSystemTones";
+    private ReactApplicationContext reactContext;
+    private MediaPlayer thePlayer;
 
     public ReactNativeSystemTonesModule(ReactApplicationContext reactContext) {
         super(reactContext);
+        this.reactContext = reactContext;
     }
 
     @Override

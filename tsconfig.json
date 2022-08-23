@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@thesparklaboratory/react-native-system-tones": ["./src/index"]
+      "@sparklaboratory/react-native-system-tones": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

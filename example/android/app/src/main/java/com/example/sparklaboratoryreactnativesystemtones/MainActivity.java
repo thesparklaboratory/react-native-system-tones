@@ -1,4 +1,4 @@
-package com.example.thesparklaboratoryreactnativesystemtones;
+package com.example.sparklaboratoryreactnativesystemtones;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

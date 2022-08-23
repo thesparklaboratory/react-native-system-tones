@@ -1,6 +1,6 @@
 {
-  "name": "@thesparklaboratory/react-native-system-tones-example",
-  "description": "Example app for @thesparklaboratory/react-native-system-tones",
+  "name": "@sparklaboratory/react-native-system-tones-example",
+  "description": "Example app for @sparklaboratory/react-native-system-tones",
   "version": "0.0.1",
   "private": true,
   "scripts": {

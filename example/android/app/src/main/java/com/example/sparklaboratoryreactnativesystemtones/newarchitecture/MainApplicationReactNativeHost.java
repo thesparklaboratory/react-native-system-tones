@@ -1,4 +1,4 @@
-package com.example.thesparklaboratoryreactnativesystemtones.newarchitecture;
+package com.example.sparklaboratoryreactnativesystemtones.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.example.thesparklaboratoryreactnativesystemtones.BuildConfig;
-import com.example.thesparklaboratoryreactnativesystemtones.newarchitecture.components.MainComponentsRegistry;
-import com.example.thesparklaboratoryreactnativesystemtones.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.example.sparklaboratoryreactnativesystemtones.BuildConfig;
+import com.example.sparklaboratoryreactnativesystemtones.newarchitecture.components.MainComponentsRegistry;
+import com.example.sparklaboratoryreactnativesystemtones.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

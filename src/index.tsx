@@ -6,7 +6,14 @@ export interface Sound {
   title: string
 }
 
-export function list(soundType: string): Promise<Sound[]> {
+export const enum SOUND_TYPES {
+  RINGTONES = "ringtone",
+  ALARMS = "alarm",
+  NOTIFICATIONS = "notification",
+  ALL = "all",
+}
+
+export function list(soundType: SOUND_TYPES): Promise<Sound[]> {
   return ReactNativeSystemTones.list(soundType)
 }
 

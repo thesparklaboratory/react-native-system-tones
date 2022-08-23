@@ -1,4 +1,4 @@
-package com.example.thesparklaboratoryreactnativesystemtones.newarchitecture.components;
+package com.example.sparklaboratoryreactnativesystemtones.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

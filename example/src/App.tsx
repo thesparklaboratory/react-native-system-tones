@@ -1,15 +1,15 @@
 import * as React from 'react';
 
 import { Button, FlatList, StyleSheet, View } from 'react-native';
-import { list, play, stop } from '@thesparklaboratory/react-native-system-tones';
-import type { Sound } from '@thesparklaboratory/react-native-system-tones';
+import { list, play, stop, SOUND_TYPES } from '@sparklaboratory/react-native-system-tones';
+import type { Sound } from '@sparklaboratory/react-native-system-tones';
 
 export default function App() {
 
   const [sounds, setSounds] = React.useState<Sound[]>([]);
 
   React.useEffect(() => {
-    list("ringtone").then(setSounds);
+    list(SOUND_TYPES.ringtones).then(setSounds);
   }, []);
 
   return (
