@@ -1,5 +1,15 @@
-const ReactNativeSystemTones = require('./NativeReactNativeSystemTones').default
+import ReactNativeSystemTones from './NativeReactNativeSystemTones'
+import type { Sound } from './NativeReactNativeSystemTones'
+export type { Sound } from './NativeReactNativeSystemTones'
 
-export function multiply(a: number, b: number): number {
-  return ReactNativeSystemTones.multiply(a, b);
+export function list(soundType: string): Promise<Sound[]> {
+  return ReactNativeSystemTones.list(soundType)
+}
+
+export function play(sound: Sound): void {
+  return ReactNativeSystemTones.play(sound.url)
+}
+
+export function stop(): void {
+  return ReactNativeSystemTones.stop()
 }
