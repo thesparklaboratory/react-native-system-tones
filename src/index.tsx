@@ -1,6 +1,10 @@
-import ReactNativeSystemTones from './NativeReactNativeSystemTones'
-import type { Sound } from './NativeReactNativeSystemTones'
-export type { Sound } from './NativeReactNativeSystemTones'
+const ReactNativeSystemTones = require('./NativeReactNativeSystemTones').default;
+
+export interface Sound {
+  soundID: string
+  url: string
+  title: string
+}
 
 export function list(soundType: string): Promise<Sound[]> {
   return ReactNativeSystemTones.list(soundType)

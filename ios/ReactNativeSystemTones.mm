@@ -1,17 +1,17 @@
-#import <AudioToolbox/AudioToolbox.h>
 #import "ReactNativeSystemTones.h"
 
 #ifdef RCT_NEW_ARCH_ENABLED
 #import "RNReactNativeSystemTonesSpec.h"
 #endif
 
+#import <AudioToolbox/AudioToolbox.h>
+
 @implementation ReactNativeSystemTones
 RCT_EXPORT_MODULE()
 
-RCT_REMAP_METHOD(list, typeParameter
-                 : (NSString *)soundType resolver
-                 : (RCTPromiseResolveBlock)resolve rejecter
-                 : (RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(list: (NSString *)soundType
+                resolve: (RCTPromiseResolveBlock)resolve
+                reject: (__unused RCTPromiseRejectBlock)reject) {
   NSURL *directoryURL;
   if ([soundType isEqualToString:@"ringtone"]) {
     directoryURL = [NSURL URLWithString:@"/Library/Ringtones"];
@@ -74,10 +74,9 @@ RCT_REMAP_METHOD(list, typeParameter
 
 SystemSoundID soundID = 0;
 
-RCT_EXPORT_METHOD(play : (NSString *)soundUrl) {
+RCT_EXPORT_METHOD(play: (NSString *)soundUrl) {
   NSURL *url = [NSURL URLWithString:soundUrl];
   AudioServicesDisposeSystemSoundID(soundID);
-  // Register the sound to the system
   AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &soundID);
   AudioServicesPlaySystemSound(soundID);
   AudioServicesPlaySystemSoundWithCompletion(soundID, ^{
