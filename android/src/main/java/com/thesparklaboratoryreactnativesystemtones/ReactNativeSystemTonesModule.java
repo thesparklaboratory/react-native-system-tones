@@ -27,6 +27,7 @@ public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSp
         this.reactContext = reactContext;
     }
 
+    @Override
     @NonNull
     public String getName() {
         return NAME;
