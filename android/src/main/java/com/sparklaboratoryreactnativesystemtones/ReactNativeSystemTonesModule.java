@@ -1,4 +1,4 @@
-package com.thesparklaboratoryreactnativesystemtones;
+package com.sparklaboratoryreactnativesystemtones;
 
 import androidx.annotation.NonNull;
 import android.database.Cursor;
@@ -33,7 +33,7 @@ public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSp
         return NAME;
     }
 
-    @ReactMethod
+    @Override
     public void list(String soundType, final Promise promise) {
         RingtoneManager manager = new RingtoneManager(this.reactContext);
         Integer ringtoneManagerType;
@@ -68,7 +68,7 @@ public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSp
     }
 
 
-    @ReactMethod
+    @Override
     public void play(String soundUrl) {
         try {
             Uri notification;
@@ -85,7 +85,7 @@ public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSp
         }
     }
 
-    @ReactMethod
+    @Override
     public void stop() {
         try {
             if (thePlayer != null) thePlayer.stop();

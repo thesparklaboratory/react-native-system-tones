@@ -1,4 +1,4 @@
-package com.thesparklaboratoryreactnativesystemtones;
+package com.sparklaboratoryreactnativesystemtones;
 
 import androidx.annotation.Nullable;
 import com.facebook.react.bridge.NativeModule;
