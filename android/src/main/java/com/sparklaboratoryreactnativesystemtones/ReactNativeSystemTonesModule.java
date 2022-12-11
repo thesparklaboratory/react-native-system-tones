@@ -11,13 +11,14 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.module.annotations.ReactModule;
 
 @ReactModule(name = ReactNativeSystemTonesModule.NAME)
-public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSpec {
+public class ReactNativeSystemTonesModule extends ReactContextBaseJavaModule {
     public static final String NAME = "ReactNativeSystemTones";
     private ReactApplicationContext reactContext;
     private MediaPlayer thePlayer;
@@ -28,12 +29,10 @@ public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSp
     }
 
     @Override
-    @NonNull
     public String getName() {
         return NAME;
     }
 
-    @Override
     public void list(String soundType, final Promise promise) {
         RingtoneManager manager = new RingtoneManager(this.reactContext);
         Integer ringtoneManagerType;
@@ -68,7 +67,6 @@ public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSp
     }
 
 
-    @Override
     public void play(String soundUrl) {
         try {
             Uri notification;
@@ -85,7 +83,6 @@ public class ReactNativeSystemTonesModule extends NativeReactNativeSystemTonesSp
         }
     }
 
-    @Override
     public void stop() {
         try {
             if (thePlayer != null) thePlayer.stop();
