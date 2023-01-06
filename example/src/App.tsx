@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { Button, FlatList, StyleSheet, View } from 'react-native';
+import type { Sound } from '@sparklaboratory/react-native-system-tones';
 import {
   list,
   play,
-  stop,
   SOUND_TYPES,
+  stop,
 } from '@sparklaboratory/react-native-system-tones';
-import type { Sound } from '@sparklaboratory/react-native-system-tones';
+import { Button, FlatList, StyleSheet, View } from 'react-native';
 
 export default function App() {
   const [sounds, setSounds] = React.useState<Sound[]>([]);

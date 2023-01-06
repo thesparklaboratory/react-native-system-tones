@@ -1,4 +1,5 @@
 # @sparklaboratory/react-native-system-tones
+
 List and use built-in system tones.
 
 ## Installation
@@ -10,7 +11,12 @@ npm install @sparklaboratory/react-native-system-tones
 ## Usage
 
 ```js
-import { list, play, stop, SOUND_TYPES } from '@sparklaboratory/react-native-system-tones';
+import {
+  list,
+  play,
+  stop,
+  SOUND_TYPES,
+} from '@sparklaboratory/react-native-system-tones';
 
 // ...
 
@@ -20,11 +26,12 @@ play(sounds[1]);
 setTimeout(() => stop(), 1000);
 ```
 
-*SOUND_TYPES*
- - RINGTONES
- - ALARMS
- - NOTIFICATIONS
- - ALL
+_SOUND_TYPES_
+
+- RINGTONES
+- ALARMS
+- NOTIFICATIONS
+- ALL
 
 _NOTE_ that alarms, notifications and all are android only, using those 3
 parameters on iOS will return to you the UI Sounds. Eventually _ALL_ will

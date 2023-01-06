@@ -1,5 +1,4 @@
 {
-  "private": false,
   "name": "@sparklaboratory/react-native-system-tones",
   "version": "0.2.4",
   "description": "test",
@@ -14,22 +13,28 @@
     "android",
     "ios",
     "cpp",
-    "sparklaboratory-react-native-system-tones.podspec",
+    "*.podspec",
     "!lib/typescript/example",
-    "!android/build",
     "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
     "!**/__tests__",
     "!**/__fixtures__",
-    "!**/__mocks__"
+    "!**/__mocks__",
+    "!**/.*"
   ],
   "scripts": {
     "test": "jest",
-    "typescript": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
+    "prepack": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn && yarn example pods"
+    "bootstrap": "yarn example && yarn install && yarn example pods",
+    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
   },
   "keywords": [
     "react-native",
@@ -37,35 +42,34 @@
     "android"
   ],
   "repository": "https://github.com/thesparklaboratory/react-native-system-tones",
-  "author": "Mike Willbanks <me@mike.engineer> (https://github.com/thesparklaboratory)",
+  "author": "Mike Willbanks <me@mike.engineer> (https://github.com/mwillbanks)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/thesparklaboratory/react-native-system-tones/issues"
   },
   "homepage": "https://github.com/thesparklaboratory/react-native-system-tones#readme",
   "publishConfig": {
-    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.7",
-    "@babel/eslint-parser": "^7.18.2",
+    "@evilmartians/lefthook": "^1.2.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@react-native-community/eslint-config": "^3.0.2",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
-    "@types/react-native": "0.68.0",
+    "@types/react-native": "0.70.0",
     "commitlint": "^17.0.2",
+    "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
-    "react": "17.0.2",
-    "react-native": "0.68.2",
-    "react-native-builder-bob": "^0.18.3",
+    "react": "18.1.0",
+    "react-native": "0.70.6",
+    "react-native-builder-bob": "^0.20.3",
     "release-it": "^15.0.0",
     "typescript": "^4.5.2"
   },
@@ -76,6 +80,10 @@
     "react": "*",
     "react-native": "*"
   },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "packageManager": "^yarn@1.22.15",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
@@ -107,7 +115,6 @@
   },
   "eslintConfig": {
     "root": true,
-    "parser": "@babel/eslint-parser",
     "extends": [
       "@react-native-community",
       "prettier"
@@ -151,12 +158,8 @@
     ]
   },
   "codegenConfig": {
-    "libraries": [
-      {
-        "name": "RNReactNativeSystemTonesSpec",
-        "type": "modules",
-        "jsSrcsDir": "src"
-      }
-    ]
+    "name": "RNReactNativeSystemTonesSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
   }
 }
