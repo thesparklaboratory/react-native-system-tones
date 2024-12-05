@@ -1,6 +1,6 @@
 {
   "name": "@sparklaboratory/react-native-system-tones",
-  "version": "0.5.0",
+  "version": "0.3.0",
   "description": "Provides access to the available system tones on the device.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
