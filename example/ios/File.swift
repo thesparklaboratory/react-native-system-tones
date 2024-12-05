@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  ReactNativeSystemTonesExample
+//  SystemTonesExample
 //
 
 import Foundation

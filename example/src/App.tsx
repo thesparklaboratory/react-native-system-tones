@@ -1,35 +1,33 @@
-import * as React from 'react';
-
-import type { Sound } from '@sparklaboratory/react-native-system-tones';
+import { Text, View, StyleSheet, Button } from 'react-native';
 import {
   list,
   play,
-  SOUND_TYPES,
   stop,
+  SOUND_TYPES,
+  type Sound,
 } from '@sparklaboratory/react-native-system-tones';
-import { Button, FlatList, StyleSheet, View } from 'react-native';
+import { useEffect, useState } from 'react';
 
 export default function App() {
-  const [sounds, setSounds] = React.useState<Sound[]>([]);
+  const [sounds, setSounds] = useState<Sound[]>([]);
 
-  React.useEffect(() => {
-    list(SOUND_TYPES.RINGTONES).then(setSounds);
+  useEffect(() => {
+    list(SOUND_TYPES.ALL).then((results) => {
+      setSounds(results);
+    });
   }, []);
 
   return (
     <View style={styles.container}>
-      <FlatList
-        data={sounds}
-        renderItem={({ item }) => (
-          <Button
-            title={item.title}
-            onPress={() => {
-              stop();
-              play(item);
-            }}
-          />
-        )}
-      />
+      <Text>System Tones</Text>
+      {sounds.map((sound) => (
+        <Button
+          key={sound.soundID}
+          title={sound.title}
+          onPress={() => play(sound)}
+        />
+      ))}
+      <Button title="Stop" onPress={stop} />
     </View>
   );
 }
@@ -39,10 +37,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });

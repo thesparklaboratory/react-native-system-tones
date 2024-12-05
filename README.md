@@ -1,6 +1,6 @@
 # @sparklaboratory/react-native-system-tones
 
-List and use built-in system tones.
+Provides access to the available system tones on the device.
 
 ## Installation
 
@@ -44,8 +44,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Inspired and original implementation by [react-native-notification-sounds](https://github.com/saadqbal/react-native-notification-sounds)
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
