@@ -1,10 +1,7 @@
-const SystemTones = require('./NativeSystemTones').default;
+import type { Sound } from './NativeSystemTones';
+import SystemTones from './NativeSystemTones';
 
-export interface Sound {
-  soundID: string;
-  url: string;
-  title: string;
-}
+export type { Sound };
 
 export const enum SOUND_TYPES {
   RINGTONES = 'ringtone',
@@ -18,7 +15,7 @@ export function list(soundType: SOUND_TYPES): Promise<Sound[]> {
 }
 
 export function play(sound: Sound): void {
-  return SystemTones.play(sound.url);
+  return SystemTones.play(sound);
 }
 
 export function stop(): void {

@@ -1510,7 +1510,7 @@ PODS:
     - React-perflogger (= 0.76.3)
     - React-utils (= 0.76.3)
   - SocketRocket (0.7.1)
-  - sparklaboratory-react-native-system-tones (0.5.0):
+  - sparklaboratory-react-native-system-tones (0.3.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1800,7 +1800,7 @@ SPEC CHECKSUMS:
   ReactCodegen: ae99a130606068ed40d1d9c0d5f25fda142a0647
   ReactCommon: 89c87b343deacc8610b099ac764848f0ce937e3e
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
-  sparklaboratory-react-native-system-tones: ef04ceccc70a882210f64f43501625337b0e37f8
+  sparklaboratory-react-native-system-tones: 8fa740d8e52e5366ae64189977c5628d970c05d4
   Yoga: f27c84c032e873cced432ea3b169dff42f4ef50f
 
 PODFILE CHECKSUM: 793a5fb31f6f8631d6ce78d6d347d3dd159ad5a2

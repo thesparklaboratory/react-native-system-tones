@@ -109,7 +109,10 @@ dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
+  implementation fileTree(dir: "libs", include: ["*.jar"])
+  implementation "androidx.appcompat:appcompat:1.2.0"
+  implementation "com.facebook.react:react-native:+" // From node_modules
+  implementation "com.facebook.react:react-android"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 

@@ -1,5 +1,5 @@
 
-#import "generated/RNSystemTonesSpec/RNSystemTonesSpec.h"
+#import <RNSystemTonesSpec.h>
 
 @interface SystemTones : NSObject <NativeSystemTonesSpec>
 

@@ -22,7 +22,7 @@ export default function App() {
       <Text>System Tones</Text>
       {sounds.map((sound) => (
         <Button
-          key={sound.soundID}
+          key={sound.soundId}
           title={sound.title}
           onPress={() => play(sound)}
         />
